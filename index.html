@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registriraj se!</h1>
+        <form id="form">
+            <div class="form-group">
+                <label for="name">Ime i Prezime</label>
+                <input type="text" id="name" placeholder="Ime i Prezime" required minlength="3" maxlength="100" name="name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Broj mobitela</label>
+                <input type="tel" id="phone" placeholder="099/1234567" required pattern="[0-9]{10}" name="šhone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email adresa</label>
+                <input type="email" id="email" placeholder="email@adresa.hr" required name="email">
+            </div>
+            <div class="form-group">
+                <label for="website">Web stranica URL</label>
+                <input type="url" id="website" placeholder="http://google.com" required name="website">
+            </div>
+            <div class="form-group">
+                <label for="password1">Lozinka</label>
+                <input type="password" id="password1" placeholder="Unesi lozinku (minimalno 8 znakova)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                title="Potrebno  minimalno 1 veliko slovo, 1 malo slovo i 1 broj">
+            </div>
+            <div class="form-group">
+                <label for="password2">Potvrdi lozinku</label>
+                <input type="password" id="password2" placeholder="Potvrdi lozinku" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+            </div>
+            <button type="submit">Registriraj</button>
+        </form>
+        <div class="message-container">
+            <h3 id="message">Pridruži nam se!!!</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
